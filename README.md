@@ -1,0 +1,1 @@
+My Project Portfolio containing hands-on projects in using SQL, Python, Tableau, PowerBI to clean, mine and visualize data. In addition, projects executed to set up and work with databases and applications in the AWS Cloud and Linux environments.
