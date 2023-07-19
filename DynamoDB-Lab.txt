@@ -1,0 +1,66 @@
+Objectives:
+
+- Create an Amazon DynamoDB table and populate it with data.
+- Query and Scan the created Amazon DynamoDB table
+
+#Created a Table by name:Music, in the Amazon DynamoBD by locating it on the Database sub-menu of the Services Menu on the Aws Management Console.
+
+#Added the name of the Table, along with the composite primary key (Partition and Sort keys) while creating the table.
+
+#Add items to the Music Table (JSON Format)
+#Item_1
+{
+  "Artist": {
+    "S": "Pink Floyd"
+  },
+  "Song": {
+    "S": "Money"
+  },
+  "Album": {
+    "S": "The Dark Side of the Moon"
+  },
+  "Year": {
+    "N": "1973"
+  }
+}
+
+#Item_2
+{
+  "Artist": {
+    "S": "John Lennon"
+  },
+  "Song": {
+    "S": "Imagine"
+  },
+  "Album": {
+    "S": "Imagine"
+  },
+  "Year": {
+    "N": "1971"
+  },
+  "Genre": {
+    "S": "Soft rock"
+  }
+}
+
+#Item_3
+{
+  "Artist": {
+    "S": "Psy"
+  },
+  "Song": {
+    "S": "Gangnam Style"
+  },
+  "Album": {
+    "S": "Psy 6 (Six Rules), Part 1"
+  },
+  "Year": {
+    "N": "2011"
+  },
+  "LengthSeconds": {
+    "S": "219"
+  }
+}
+
+#Queried the Music Table by the composite primary key of the items.
+#Scanned the Music Table by the attributes of the items.
