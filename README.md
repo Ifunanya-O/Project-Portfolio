@@ -1,1 +1,1 @@
-This file shows to create users and assign groups in Linux.
+This shows how to create users and assign groups in Linux.
