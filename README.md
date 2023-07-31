@@ -1,0 +1,1 @@
+The dataset contains data for the revenue in sales of a Big Fashion Group in Australia. Records include states, category of items sold, the distribution chain, financial year, names of sales managers, amongst others others. Analysis was done to identify the top performing chain, state and category for each financial year.
