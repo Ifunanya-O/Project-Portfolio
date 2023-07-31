@@ -1,1 +1,1 @@
-This branch contains all the visualization projects done with Tableau and one (Revenue from Product Chains) done with Excel presented in a PDF format.
+This branch contains all the visualization projects done with Tableau presented in a PDF format. Kindly go to https://public.tableau.com/app/profile/ifunanya.obananya to view all my hands-on Tableau projects.
