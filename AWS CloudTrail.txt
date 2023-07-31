@@ -1,0 +1,235 @@
+#Business Case: A new request from the Café leadership team to discover who hacked the Cafe website.
+
+#Activity overview
+echo "In this activity, you create an AWS CloudTrail trail that audits actions taken in your account. You then investigate to determine who modified the Café website."
+
+#Tasks to Complete:
+
+#Configure a CloudTrail trail
+#Analyze CloudTrail logs by using various methods to discover relevant information
+#Import CloudTrail log data into Athena
+#Run queries in Athena to filter CloudTrail log entries
+#Resolve security concerns within the AWS account and on an EC2 Linux instance
+
+
+#Task 1: Create a CloudTrail log
+#In the AWS Management Console, from the Services menu, select Management & Governance then CloudTrail.
+#In the CloudTrail Console, on the navigation pane on the left, choose Trails and then, create a Trail.
+
+
+#Task 2: Analyzing the CloudTrail logs by using grep
+Connect to the Cafe Server via putty
+
+
+#Task 3: Download and extract the CloudTrail logs
+
+#create a local directory on the web server to download the CloudTrail log files
+mkdir ctraillogs
+
+#change the directory to the new directory
+cd ctraillogs
+
+#List the buckets to recall the bucket name
+aws s3 ls
+
+#Download the CloudTrail logs
+aws s3 cp s3://monitoring2254/ . --recursive
+
+#Verify the log list
+ls
+
+#Use the cd and ls commands repeatedly (or enter cd and then press Tab multiple times) as necessary to change the directory to the subdirectory where the logs were downloaded. When you run ls, all of the downloaded log files should display.
+
+#extract the logs
+gunzip *.gz
+
+
+#Task 4: Analyze the logs by using grep
+#To analyze the structure of the logs, do the following:
+
+#Copy one of the file names returned by the ls command that you ran.
+#Enter cat in the terminal window, followed by a space, and then paste the copied file name. Run the command.
+cat 177669818627_CloudTrail_us-east-1_20230726T1435Z_Bhg4xIbHhwWRys2x.json 
+
+echo "Note that the files are in JavaScript Object Notation (JSON) format. However, it is difficult to read them in this output format."
+#This ambiguous result is attached in the folder.
+
+#Run the cat command again, but this time format the output:
+cat 177669818627_CloudTrail_us-east-1_20230726T1435Z_Bhg4xIbHhwWRys2x.json | python -m json.tool
+
+echo"This format is more readable. The structure of the log entries can now be seen. Notice that each entry contains the same standard fields, including awsRegion, eventName, eventSource, eventTime, requestParameters, sourceIPAddress, userIdentity, and more."
+#This readable format can also be seen in the next attachment
+
+#Start by filtering the log results where the sourceIpAddress matches the IP address of the Café Web Server instance.
+ip=35.89.140.197
+
+#Run the following command:
+for i in $(ls); do echo $i && cat $i | python -m json.tool | grep sourceIPAddress ; done
+
+echo "This command does the following:
+It creates a for loop that includes the names of the files in the current directory.
+During each iteration of the for loop, it echoes the file name and then prints the contents of the file in JSON format.
+Only the lines of JSON that contain the sourceIPAddress tag are printed."
+
+#Run a similarly structured command but where the command returns the eventName of every captured event:
+for i in $(ls); do echo $i && cat $i | python -m json.tool | grep eventName ; done
+
+#AWC CLI Command to filter the trail for console logins.
+aws cloudtrail lookup-events --lookup-attributes AttributeKey=EventName,AttributeValue=ConsoleLogin
+
+echo"The results indicate there have been no console login events or that the only user who has logged into the console is the same user that you are logged into the console as. However, there are other ways to modify resources on AWS instead of using the console. The hacker might have used a different approach."
+
+#Find any actions that were taken on security groups in the AWS account
+aws cloudtrail lookup-events --lookup-attributes AttributeKey=ResourceType,AttributeValue=AWS::EC2::SecurityGroup --output text
+
+#Narrow the search results further by finding the security group ID that is used by the Café Web Server instance, and then echo the result to the terminal:
+region=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document|grep region | cut -d '"' -f4)
+sgId=$(aws ec2 describe-instances --filters "Name=tag:Name,Values='Cafe Web Server'" --query 'Reservations[*].Instances[*].SecurityGroups[*].[GroupId]' --region $region --output text)
+echo $sgId
+
+#Now use the security group ID that the previous command returned to further filter your AWS CLI CloudTrail command results:
+aws cloudtrail lookup-events --lookup-attributes AttributeKey=ResourceType,AttributeValue=AWS::EC2::SecurityGroup --region $region --output text | grep $sgId
+
+
+#Task 5: Analyzing the CloudTrail logs by using Athena
+--Create the Athena table by opening the AWS Management Console, from the Services menu, choose 'Manangement and Governance', then CloudTrail, and click on Event History tab on the CloudTrail console.
+--The query to create the Athena Table is autogenerated, you only need to specify the storage location.
+--From the Services menu, choose Analytics then the Athena service, and then the Query Editor.
+--Edit Settings to set location of query result
+
+--Select the Editor table and run the following SQL query in the Query panel.
+SELECT *
+FROM cloudtrail_logs_monitoring2254
+LIMIT 5
+
+--This query returns five rows of data. Look at the result set (scroll to the right in the Results panel to see additional column data).
+--Focus on the columns useridentity, eventtime, eventsource, eventname, and requestparameters, which contain the most valuable information to help you find the origin of the hack.
+  
+--The useridentity column has many details that make it more difficult to read though. You now return only the user name for that column.
+SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
+FROM cloudtrail_logs_monitoring2254
+LIMIT 30
+
+--Try filtering by events that are related to the Amazon EC2 service
+SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
+FROM cloudtrail_logs_monitoring2254
+WHERE eventsource = 'ec2.amazonaws.com'
+
+--Refine your SQL query so that it looks for only events that contain the word 'Security' for events related to creating and modify the securitygroups
+SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
+FROM cloudtrail_logs_monitoring2254
+WHERE eventsource = 'ec2.amazonaws.com' AND eventname LIKE '%Security%'
+
+--pecifically shows users and useractivities within the past twenty-four hours
+SELECT DISTINCT useridentity.userName, eventtime, eventSource, sourceipaddress FROM cloudtrail_logs_monitoring2254 WHERE from_iso8601_timestamp(eventtime) > date_add('day', -1, now()) ORDER BY eventSource;
+
+
+#Task 6: Check the OS users
+
+#In the terminal where you have an active SSH session to the web server instance, run the following command to find out who has recently logged into this operating system (OS):
+sudo aureport --auth
+
+echo "There is evidence that a user other than ec2-user has logged in. Who is that chaos-user?"
+
+#Run the who command to figure out who is currently logged in:
+who
+
+echo"The user is still logged in! Get them off this instance right away!"
+
+#Run the following command to try to remove the chaos-user OS user:
+sudo userdel -r chaos-user
+
+echo"That didn't work because they are still logged in. However, it did return the process number:4246 they are connected as."
+
+#Run the adjusted command to stop the process that has the active chaos-user login session:
+sudo kill -9 ProcNum
+#Adjusted command:
+sudo kill -9 4246
+
+#Run the who command again to verify that the chaos-user OS user is no longer connected:
+who
+
+echo"Now you (the ec2-user) should be the only user connected."
+
+#Run the following command to try to delete the chaos-user again:
+sudo userdel -r chaos-user
+
+echo"It should succeed this time."
+
+#Verify no other suspicious OS users who can login:
+sudo cat /etc/passwd | grep -v nologin
+
+echo"the grep part of the command you just ran filtered out the OS users who do not have a login"
+
+
+Task 7: Update SSH security
+#Analyze SSH settings on the instance.
+sudo ls -l /etc/ssh/sshd_config
+
+echo"The file was last modified today"
+
+#Edit the SSH configuration file in the VI editor:
+sudo vi /etc/ssh/sshd_config
+
+#Run the following command to restart the SSH service so that the changes go into effect:
+sudo service sshd restart
+
+#Finally, in the EC2 console, return to the Web Server security group settings by reconfiguring the security group.
+#Delete the inbound rule that allows port 22 access from 0.0.0.0/0 (the one the hacker created) and save changes.
+
+Task 5.3: Fix the website
+#Now that the hacker no longer has access to this instance, you can fix the issue with the website.
+
+#Run the following command to navigate to the directory where the website image files are held and review the contents:
+cd /var/www/html/cafe/images/
+ls -l
+
+echo"It looks like the hacker created a backup of the original file."
+
+#Run the following command to restore the original graphic on the website.
+sudo mv Coffee-and-Pastries.backup Coffee-and-Pastries.jpg
+
+#To test the fix, reload the http://35.87.164.208/cafe website in the browser.
+
+
+Task 8: Delete the AWS hacker user
+#In this step, you remove the chaos AWS Identity and Access Management (IAM) user from the account.
+#In the AWS Management Console, choose the Services menu, and choose IAM.
+#Choose the Users link, and select the check box next to the chaos user.
+#Choose Delete, enter the users name and select Delete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
