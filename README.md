@@ -25,9 +25,13 @@ Initially, the model was applied to a subset of data (Year=2021) with fewer miss
 For missing values in the Refugees column, which were not missing at random, MICE imputations were used, but this column was later dropped due to its irrelevance. The final model provided the following estimates:
 
 Crime_Rate = -372.23 + 0.0003Average_total_income + 44.49Low_income_rate + 3.56Non_immigrants + 3.48Non_citizen
-For the full dataset, the Refugees column was excluded, and MICE imputations were used for the Low_income_rate column. The final model estimates were:
+
+For the full dataset, the Refugees column was excluded, and MICE imputations were used for the Low_income_rate column. 
+
+The final model estimates were:
 
 Crime_Rate = 10.8035 + 0Population + 1.1Low_income_rate + 0.2Visible_Minority - 0.09Owner - 0.1*Renter
+
 Notably, issues with multicollinearity were observed, and some variables (Population) had coefficients of zero or high p-values, influencing their inclusion in the final model.
 
 
