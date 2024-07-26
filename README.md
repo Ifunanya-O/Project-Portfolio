@@ -50,7 +50,7 @@ The performance of the three models, particularly the Classification Tree and Lo
 
 
 
-4. Food Demand Forecasting
+3. Food Demand Forecasting
 Models: XGBoost, LightGBM
 Description:
 
