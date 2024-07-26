@@ -10,14 +10,15 @@ SQL and Python: Developed robust data pipelines and performed advanced analytics
 
 
 Tableau and Power BI: Created interactive dashboards and visualizations that effectively communicate complex data insights to stakeholders, enhancing strategic planning and operational efficiency.
+Links:
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Tableau
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Power-BI
 
 AWS Cloud Solutions: Implemented scalable and secure cloud-based applications and databases, supporting business continuity and facilitating innovation.
-https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS 
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS 
 
 Linux Environments: Managed and optimized applications in Linux environments, ensuring high availability and performance, contributing to reliable and efficient IT operations.
-https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
 
 This portfolio exemplifies my ability to deliver comprehensive data and cloud solutions that enhance business intelligence and operational capabilities.
 
