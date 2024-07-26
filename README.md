@@ -37,6 +37,7 @@ Notably, issues with multicollinearity were observed, and some variables (Popula
 
 
 2. Home Equity Loan Optimization
+
 Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 Description: Worked on optimizing home equity loan approval processes. Utilized KNN, Logistic Regression, and Decision Tree algorithms to predict loan defaults and identify key factors influencing loan approvals.
 
