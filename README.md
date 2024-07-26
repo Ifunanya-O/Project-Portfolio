@@ -43,7 +43,9 @@ Crime_Rate = 10.8035 + 0Population + 1.1Low_income_rate + 0.2Visible_Minority + 
 2. Home Equity Loan Optimization
 Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 Description: Worked on optimizing home equity loan approval processes. Utilized KNN, Logistic Regression, and Decision Tree algorithms to predict loan defaults and identify key factors influencing loan approvals.
-4. Food Demand Forecasting
+
+
+3. Food Demand Forecasting
 Models: XGBoost, LightGBM
 Description: Created forecasting models to predict food demand for various locations. Leveraged XGBoost and LightGBM algorithms to handle large datasets and improve forecasting accuracy.
 Additional Work
