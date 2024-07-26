@@ -35,6 +35,7 @@ Crime_Rate = 10.8035 + 0Population + 1.1Low_income_rate + 0.2Visible_Minority - 
 Notably, issues with multicollinearity were observed, and some variables (Population) had coefficients of zero or high p-values, influencing their inclusion in the final model.
 
 
+
 2. Home Equity Loan Optimization
 Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 Description: Worked on optimizing home equity loan approval processes. Utilized KNN, Logistic Regression, and Decision Tree algorithms to predict loan defaults and identify key factors influencing loan approvals.
