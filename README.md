@@ -39,13 +39,29 @@ Notably, issues with multicollinearity were observed, and some variables (Popula
 Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 Description: Worked on optimizing home equity loan approval processes. Utilized KNN, Logistic Regression, and Decision Tree algorithms to predict loan defaults and identify key factors influencing loan approvals.
 
+Dataset used in the project: 
+http://www.creditriskanalytics.net/datasets-private2.html
 
-3. Food Demand Forecasting
+Result:
+
+A comprehensive analysis of the likelihood of default on home equity loans using Logistic Regression, KNN, and Classification Tree models has provided significant insights into the key predictors of loan defaults. The findings indicate that traditional metrics like the LTV ratio may not be as critical in predicting defaults as previously thought. Instead, factors such as DEBTINC_AVAIL (NOA Income availability), DEROG (Number of Major Derogatory Reports), and DELINQ (Delinquency on the Line of Credit) have emerged as crucial indicators.
+
+The performance of the three models, particularly the Classification Tree and Logistic Regression models, has highlighted the importance of these variables. The KNN model, while effective, showed a slightly lower performance compared to the other models. The refined Logistic Regression model, with optimized thresholds, demonstrated an improved balance between precision and recall, ensuring a more reliable identification of defaults.
+
+
+
+4. Food Demand Forecasting
 Models: XGBoost, LightGBM
-Description: Created forecasting models to predict food demand for various locations. Leveraged XGBoost and LightGBM algorithms to handle large datasets and improve forecasting accuracy.
-Additional Work
+Description:
+
+Created forecasting models to predict food demand for various locations. Leveraged XGBoost and LightGBM algorithms to handle large datasets and improve forecasting accuracy.
+
+Data Preprocessing, Exploratory Data Analysis and Feature Engineering
+
 Exploratory Data Analysis (EDA): Performed comprehensive exploratory data analysis to understand the datasets, uncover patterns, and prepare data for modeling.
+
 Feature Engineering: Conducted feature engineering to enhance model performance by creating new features and selecting the most relevant ones.
+
 Explore the individual project directories for detailed information, code, and results. Each project demonstrates my ability to apply machine learning techniques to real-world problems and drive valuable insights.
 
 
