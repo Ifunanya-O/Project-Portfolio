@@ -16,7 +16,9 @@ Seaborn and Matplotlib: Created various visualizations using Seaborn and Matplot
 
 Web Scraping Project
 
-This project focused on practicing web scraping techniques using Python, specifically with the BeautifulSoup library. Key aspects of the project include:
+This project focused on practicing web scraping techniques using Python. url = 'https://en.wikipedia.org/wiki/List_of_largest_companies_in_the_United_States_by_revenue'
+
+Key aspects of the project include:
 
 Web Scraping:
 
