@@ -6,7 +6,7 @@ Database and Application Management: Executed projects focused on setting up and
 
 Business Insights
 
-SQL and Python: Developed robust data pipelines and performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
+SQL and Python: Performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
 Links: 
 https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL 
 
@@ -21,10 +21,10 @@ https://github.com/Ifunanya-O/Project-Portfolio/tree/Tableau
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Power-BI
 
 
-AWS Cloud Solutions: Implemented scalable and secure cloud-based applications and databases, supporting business continuity and facilitating innovation.
+AWS Cloud Solutions: Supported the implementation of scalable and secure cloud-based applications and databases, enhancing business continuity and facilitating innovation.
 Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS 
 
-Linux Environments: Managed and optimized applications in Linux environments, ensuring high availability and performance, contributing to reliable and efficient IT operations.
+Linux Environments: Managed permissions in Linux environments, contributing to reliable and efficient IT operations.
 Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
 
 This portfolio exemplifies my ability to deliver comprehensive data and cloud solutions that enhance business intelligence and operational capabilities.
