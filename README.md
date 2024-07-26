@@ -8,6 +8,7 @@ Business Insights
 
 SQL and Python: Developed robust data pipelines and performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
 Links: https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL 
+https://github.com/Ifunanya-O/Project-Portfolio/tree/Python 
 
 
 Tableau and Power BI: Created interactive dashboards and visualizations that effectively communicate complex data insights to stakeholders, enhancing strategic planning and operational efficiency.
