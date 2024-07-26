@@ -7,6 +7,7 @@ Database and Application Management: Executed projects focused on setting up and
 Business Insights
 
 SQL and Python: Developed robust data pipelines and performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
+Links: https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL 
 
 
 Tableau and Power BI: Created interactive dashboards and visualizations that effectively communicate complex data insights to stakeholders, enhancing strategic planning and operational efficiency.
