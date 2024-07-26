@@ -19,25 +19,16 @@ https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?
 
 Result:
 
-Linear regression was run to find point estimates for predicting incident_rate. 
+The crime prediction model used linear regression to estimate the incident_rate. 
+Initially, the model was applied to a subset of data (Year=2021) with fewer missing values. 
 
-Because of multiple missing values, the model was first run on a subset of data (where Year=2021) which had fewer missing values that were missing at random asides from the Refugees column which had multiple values that were missing not at random. MICE imputations was hence used to replace the values. 
+For missing values in the Refugees column, which were not missing at random, MICE imputations were used, but this column was later dropped due to its irrelevance. The final model provided the following estimates:
 
-However, the particular column that had most of the missing values was dropped as it didn't belong to the model, therefore, Linear regression model was run without using the MICE imputations. This final model returned the following point estimates:
+Crime_Rate = -372.23 + 0.0003Average_total_income + 44.49Low_income_rate + 3.56Non_immigrants + 3.48Non_citizen
+For the full dataset, the Refugees column was excluded, and MICE imputations were used for the Low_income_rate column. The final model estimates were:
 
-Crime_Rate = -372.23 + 0.0003Average_total_income + 44.49Low_income_rate + 3.56Non_immigrants + 3.48Non_citizen.
-
-For the total dataset, the Refugees column was dropped too as it had multiple values that were missing not at random. The Low_income_rate column also had a higher amount of missing values, however, the missing values were replaced using MICE imputations. The model was run and these were observed:
-
-The Low_income_rate p-value: 0.64, is higher than alpha:0.05. However, this independent variable was left in the final model because this maybe due to MICE imputations as it had large volume of missing values in the total dataset. Unlike in the 2021 dataset where there was no missing value in the Low_income_rate column, and this subset dataset showed a near zero p-value for Low_income_rate.
-
-The p-value of Postsecondary_Graduate tend to increase when Non_citizen and Non_immigrants variable are removed, suggesting a multicollinearity problem. However, hypothesis testing could not be done on MICE result.
-
-Population has a zero (0) coefficient in the final model which is the same in the subset model. Although in the subset model,population had a higher p-value than alpha(0.05), hence was no included in the final model.
-
-The final model returned the following point estimates:
-
-Crime_Rate = 10.8035 + 0Population + 1.1Low_income_rate + 0.2Visible_Minority + (-0.09)*Owner + (-0.1)*Renter
+Crime_Rate = 10.8035 + 0Population + 1.1Low_income_rate + 0.2Visible_Minority - 0.09Owner - 0.1*Renter
+Notably, issues with multicollinearity were observed, and some variables (Population) had coefficients of zero or high p-values, influencing their inclusion in the final model.
 
 
 2. Home Equity Loan Optimization
