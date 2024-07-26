@@ -17,6 +17,9 @@ Database and Application Management: Executed projects focused on setting up and
 
 Business Insights
 
+Machine Learning: These projects highlight the ability to apply machine learning techniques to real-world problems, delivering actionable insights that support data-driven decision-making and operational efficiency.
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Machine-Learning 
+
 SQL and Python: Performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
 Links: 
 https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL 
