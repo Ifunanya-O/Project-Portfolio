@@ -2,14 +2,11 @@ This portfolio features hands-on projects demonstrating my expertise in AI, data
 
 Machine Learning: This repository highlights my expertise in predictive modeling, optimization, and forecasting through various projects:
 
-Crime Prediction
-Model: Linear Regression
+Crime Prediction. Model: Linear Regression
 
-Home Equity Loan Optimization
-Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
+Home Equity Loan Optimization. Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 
-Food Demand Forecasting
-Models: XGBoost, LightGBM
+Food Demand Forecasting. Models: XGBoost, LightGBM
 
 Data Analysis and Visualization: Leveraged SQL, Python, Tableau, and Power BI to clean, mine, and visualize data, providing actionable insights that drive informed business decisions.
 
