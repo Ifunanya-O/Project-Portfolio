@@ -41,6 +41,6 @@ Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS
 Linux Environments: Managed permissions in Linux environments, contributing to reliable and efficient IT operations.
 Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
 
-This portfolio exemplifies my ability to deliver comprehensive data and cloud solutions that enhance business intelligence and operational capabilities.
+The portfolio exemplifies my ability to deliver comprehensive data and cloud solutions that enhance business intelligence and operational capabilities.
 
 
