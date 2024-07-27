@@ -1,4 +1,4 @@
-This portfolio features hands-on projects demonstrating my expertise in data analytics and cloud solutions, showcasing the following key areas:
+This portfolio features hands-on projects demonstrating my expertise in AI, data analytics and cloud solutions, showcasing the following key areas:
 
 Machine Learning: This repository highlights my expertise in predictive modeling, optimization, and forecasting through various projects:
 
