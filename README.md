@@ -2,20 +2,21 @@ This portfolio features hands-on projects demonstrating my expertise in AI, mach
 
 Machine Learning: This repository highlights my expertise in predictive modeling, optimization, and forecasting through various projects:
 
-Crime Prediction. Model: Linear Regression
+Food Demand Forecasting. Models: XGBoost, LightGBM
 
 Home Equity Loan Optimization. Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
 
-Food Demand Forecasting. Models: XGBoost, LightGBM
+Crime Prediction. Model: Linear Regression
+
+Insights:
+
+These projects highlight the ability to apply machine learning techniques to real-world problems, delivering actionable insights that support data-driven decision-making and operational efficiency.
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Machine-Learning 
+
 
 Data Analysis and Visualization: Leveraged SQL, Python, Tableau, and Power BI to clean, mine, and visualize data, providing actionable insights that drive informed business decisions.
 
-Database and Application Management: Executed projects focused on setting up and managing databases and applications within AWS Cloud and Linux environments, ensuring seamless integration and optimal performance.
-
-Business Insights
-
-Machine Learning: These projects highlight the ability to apply machine learning techniques to real-world problems, delivering actionable insights that support data-driven decision-making and operational efficiency.
-Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Machine-Learning 
+Insights:
 
 SQL and Python: Performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
 Links: 
@@ -23,14 +24,15 @@ https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL
 
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Python 
 
-
-
 Tableau and Power BI: Created interactive dashboards and visualizations that effectively communicate complex data insights to stakeholders, enhancing strategic planning and operational efficiency.
 Links:
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Tableau
 
 https://github.com/Ifunanya-O/Project-Portfolio/tree/Power-BI
 
+Database and Application Management: Executed projects focused on setting up and managing databases and applications within AWS Cloud and Linux environments, ensuring seamless integration and optimal performance.
+
+Insights:
 
 AWS Cloud Solutions: Supported the implementation of scalable and secure cloud-based applications and databases, enhancing business continuity and facilitating innovation.
 Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS 
