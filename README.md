@@ -55,20 +55,18 @@ The performance of the three models, particularly the Classification Tree and Lo
 
 
 3. Food Demand Forecasting
+   
 Models: XGBoost, LightGBM
 
-Description: Created forecasting models to predict food demand for various locations.
+Description: Develop a model to accurately forecast food demand across multiple cities where store centers are located.
 
 Dataset used in the project:
 https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon-1/#ProblemStatement
 
-Data Preprocessing, Exploratory Data Analysis and Feature Engineering
+Result:
 
-Exploratory Data Analysis (EDA): Performed comprehensive exploratory data analysis to understand the datasets, uncover patterns, and prepare data for modeling.
+Analyzed data to understand correlations between various features and identified key drivers of food demand.
 
-Feature Engineering: Conducted feature engineering to enhance model performance by creating new features and selecting the most relevant ones.
+Created features such as; `num_orders_rolling_mean_3`, `price_ratio`, `Average number of orders per meal over the last 4, 10, and 20 weeks`, `Average price difference per meal over the last 4, 10, and 20 weeks` to enhance model input with meaningful and insightful features.
 
-Explore the individual project directories for detailed information, code, and results. Each project demonstrates my ability to apply machine learning techniques to real-world problems and drive valuable insights.
-
-
-
+The performance of the models, LightGBM and XGBoost, were evaluated models using RMSE and RMSLE metrics. LightGBM was selected due to its superior performance with a lower RMSLE. Utilized the chosen model to forecast food demand, aiding in inventory and logistics planning.
