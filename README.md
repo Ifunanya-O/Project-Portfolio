@@ -3,6 +3,7 @@ Welcome to my machine learning project portfolio! This repository showcases vari
 1. Crime Prediction
 
 Model: Linear Regression
+
 Description: Developed a model to predict crime rates based on historical data and various influencing factors.
 Applied linear regression techniques to analyze trends and make data-driven predictions.
 
@@ -39,6 +40,7 @@ Notably, issues with multicollinearity were observed, and some variables (Popula
 2. Home Equity Loan Optimization
 
 Models: K-Nearest Neighbors (KNN), Logistic Regression, Decision Tree
+
 Description: Worked on optimizing home equity loan approval processes. Utilized KNN, Logistic Regression, and Decision Tree algorithms to predict loan defaults and identify key factors influencing loan defaults.
 
 Dataset used in the project: 
@@ -54,9 +56,11 @@ The performance of the three models, particularly the Classification Tree and Lo
 
 3. Food Demand Forecasting
 Models: XGBoost, LightGBM
-Description:
 
-Created forecasting models to predict food demand for various locations. Leveraged XGBoost and LightGBM algorithms to handle large datasets and improve forecasting accuracy.
+Description: Created forecasting models to predict food demand for various locations.
+
+Dataset used in the project:
+https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon-1/#ProblemStatement
 
 Data Preprocessing, Exploratory Data Analysis and Feature Engineering
 
