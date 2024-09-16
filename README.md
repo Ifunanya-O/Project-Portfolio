@@ -1,5 +1,7 @@
 This portfolio features hands-on projects demonstrating my expertise in AI, machine learning, data analytics and cloud solutions, showcasing the following key areas:
-
+- Natural Language Processing
+  Sentiment analysis, training classification models to predict product sentiment.
+  
 - Machine Learning: This repository highlights my expertise in predictive modeling, optimization, and forecasting through various projects:
 
 Food Demand Forecasting. Models: XGBoost, LightGBM
@@ -33,10 +35,6 @@ https://github.com/Ifunanya-O/Project-Portfolio/tree/Power-BI
 - Database and Application Management: Executed projects focused on setting up and managing databases and applications within AWS Cloud and Linux environments, ensuring seamless integration and optimal performance.
 
 Insights:
-
-- AWS Cloud Solutions: Supported the implementation of scalable and secure cloud-based applications and databases, enhancing business continuity and facilitating innovation.
-Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/AWS 
-
 - Linux Environments: Managed permissions in Linux environments, contributing to reliable and efficient IT operations.
 Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
 
