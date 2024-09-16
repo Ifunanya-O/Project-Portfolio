@@ -1,6 +1,7 @@
 This portfolio features hands-on projects demonstrating my expertise in AI, machine learning, data analytics and cloud solutions, showcasing the following key areas:
-- Natural Language Processing
-  Sentiment analysis, training classification models to predict product sentiment.
+- Natural Language Processing: Sentiment analysis, training classification models to predict product sentiment.
+
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/NLP
   
 - Machine Learning: This repository highlights my expertise in predictive modeling, optimization, and forecasting through various projects:
 
