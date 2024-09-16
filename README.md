@@ -10,8 +10,7 @@ Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Machine-Learning
 - Data Analysis and Visualization: Leveraged SQL, Python, Tableau, and Power BI to clean, mine, and visualize data, providing actionable insights that drive informed business decisions.
 
 Links: 
-- SQL and Python: Performed advanced analytics, enabling businesses to uncover trends and make data-driven decisions.
-
+- SQL
 https://github.com/Ifunanya-O/Project-Portfolio/tree/SQL 
 
 - Python
@@ -25,8 +24,7 @@ https://github.com/Ifunanya-O/Project-Portfolio/tree/Power-BI
 
 - Database and Application Management: Executed projects focused on setting up and managing databases and applications within AWS Cloud and Linux environments, ensuring seamless integration and optimal performance.
 
-Link: 
-- https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
+Link: https://github.com/Ifunanya-O/Project-Portfolio/tree/Linux 
 
 The portfolio exemplifies my ability to deliver comprehensive data and cloud solutions that enhance business intelligence and operational capabilities.
 
